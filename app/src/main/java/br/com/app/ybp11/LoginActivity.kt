@@ -23,6 +23,9 @@ import android.widget.TextView
 
 import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
+import android.app.Activity
+import android.content.Intent
+import android.content.*
 
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -265,8 +268,14 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             mAuthTask = null
             showProgress(false)
 
+
+            //se login for efetuado com sucesso
             if (success!!) {
-                finish()
+
+                super.onPostExecute(success)
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                startActivity(intent)
+
             } else {
                 password.error = getString(R.string.error_incorrect_password)
                 password.requestFocus()
