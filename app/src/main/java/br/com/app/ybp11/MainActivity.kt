@@ -9,25 +9,25 @@ class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_home -> {
+            R.id.navigation_membros -> {
                 message.setText(R.string.title_membros)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
+            R.id.navigation_lojas -> {
                 message.setText(R.string.title_lojas)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
+            R.id.navigation_home -> {
                 message.setText(R.string.title_activity_main)
                 return@OnNavigationItemSelectedListener true
             }
 
-            R.id.navigation_notifications -> {
+            R.id.navigation_calendario -> {
                 message.setText(R.string.title_calendario)
                 return@OnNavigationItemSelectedListener true
             }
 
-            R.id.navigation_notifications -> {
+            R.id.navigation_perfil -> {
                 message.setText(R.string.title_perfil)
                 return@OnNavigationItemSelectedListener true
             }
@@ -40,5 +40,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+
     }
+
 }
