@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_home -> {
-                message.setText(R.string.title_activity_main)
+                message.setText(R.string.title_activity_main) 
                 return@OnNavigationItemSelectedListener true
             }
 
